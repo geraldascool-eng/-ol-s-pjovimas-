@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Žolės Pjovimas | Tvarkinga veja – graži aplinka!</title>
+  <meta name="description" content="Žolės pjovimas, surinkimas ir išvežimas. Susisiekite telefonu +370 630 79409 arba +370 646 07896.">
+  <style>
+    :root{--green:#39d353;--dark:#07110a;--dark2:#102018;--text:#f5fff7;--muted:#b8c8bc}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--dark);color:var(--text)}
+    a{text-decoration:none;color:inherit}
+    .hero{min-height:100vh;padding:28px 7%;display:flex;align-items:center;
+      background:radial-gradient(circle at 80% 20%,#245b2d 0,#0b1d10 38%,#07110a 72%)}
+    .wrap{max-width:1100px;margin:auto;width:100%}
+    nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:70px}
+    .logo{font-weight:900;font-size:22px}.logo span{color:var(--green)}
+    nav a{color:#dcebe0;margin-left:22px;font-weight:700}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+    h1{font-size:clamp(46px,7vw,86px);line-height:.92;margin:0 0 24px;letter-spacing:-4px}
+    h1 span{color:var(--green)}
+    .lead{font-size:21px;color:var(--muted);line-height:1.55;max-width:650px}
+    .buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-block;padding:16px 24px;border-radius:14px;font-weight:900}
+    .primary{background:var(--green);color:#061008}.secondary{border:1px solid #42614b;background:#102018}
+    .card{background:linear-gradient(145deg,#172a1d,#0d1911);border:1px solid #315039;border-radius:28px;padding:30px;box-shadow:0 20px 60px #0008}
+    .mower{font-size:100px;text-align:center;margin-bottom:10px}
+    .phone{font-size:22px;font-weight:900;color:var(--green);display:block;margin:12px 0}
+    section{padding:85px 7%}
+    .section-title{font-size:42px;margin:0 0 35px}.section-title span{color:var(--green)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service{padding:28px;border-radius:22px;background:var(--dark2);border:1px solid #294331}
+    .icon{font-size:38px}.service h3{font-size:23px}.service p{color:var(--muted);line-height:1.5}
+    .prices{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .price{padding:22px;background:#0f2115;border:1px solid #2e5138;border-radius:18px}
+    .price strong{font-size:25px;color:var(--green);display:block;margin-top:7px}
+    .hours{max-width:650px}.row{display:flex;justify-content:space-between;padding:17px 0;border-bottom:1px solid #294331}
+    .cta{text-align:center;background:linear-gradient(135deg,#12351a,#0b1710)}
+    .cta p{color:var(--muted);font-size:19px}
+    footer{padding:28px 7%;text-align:center;color:#8fa296;border-top:1px solid #1d3324}
+    @media(max-width:800px){.hero-grid,.grid,.prices{grid-template-columns:1fr}.hero{padding-top:20px}nav{margin-bottom:45px}nav .links{display:none}h1{letter-spacing:-2px}.card{margin-top:10px}}
+  </style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav>
+      <div class="logo">🌿 <span>ŽOLĖS</span> PJOVIMAS</div>
+      <div class="links"><a href="#paslaugos">Paslaugos</a><a href="#kainos">Kainos</a><a href="#kontaktai">Kontaktai</a></div>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <h1>TVARKINGA VEJA.<br><span>GRAŽI APLINKA.</span></h1>
+        <p class="lead">Pjauname žolę, surenkame nupjautą žolę ir ją išvežame. Greitai, tvarkingai ir susitarus dėl kainos prieš darbą.</p>
+        <div class="buttons">
+          <a class="btn primary" href="tel:+37063079409" onclick="return handleCall(event, '+37063079409')">📞 SKAMBINTI</a>
+          <a class="btn secondary" href="#kainos">💶 KAINOS</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="mower">🚜🌱</div>
+        <h2>Užsakykite žolės pjovimą</h2>
+        <p>Pasakykite plotą ir kokio darbo reikia – aptarsime kainą.</p>
+        <a class="phone" href="tel:+37063079409" onclick="return handleCall(event, '+37063079409')">+370 630 79409</a>
+        <a class="phone" href="tel:+37064607896" onclick="return handleCall(event, '+37064607896')">+370 646 07896</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="paslaugos">
+  <div class="wrap">
+    <h2 class="section-title">Mūsų <span>paslaugos</span></h2>
+    <div class="grid">
+      <div class="service"><div class="icon">✂️</div><h3>Žolės pjovimas</h3><p>Tvarkingas vejos ir žolės pjovimas pagal sutartą darbų apimtį.</p></div>
+      <div class="service"><div class="icon">🧹</div><h3>Surinkimas</h3><p>Po pjovimo surenkame nupjautą žolę ir paliekame tvarkingą plotą.</p></div>
+      <div class="service"><div class="icon">🚛</div><h3>Išvežimas</h3><p>Jeigu reikia, nupjautą žolę išvežame kartu su kitomis sutartomis paslaugomis.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="kainos">
+  <div class="wrap">
+    <h2 class="section-title">Orientacinės <span>kainos</span></h2>
+    <div class="prices">
+      <div class="price">Iki 100 m²<strong>15–20 €</strong></div>
+      <div class="price">Iki 200 m²<strong>25–30 €</strong></div>
+      <div class="price">Iki 500 m²<strong>45–60 €</strong></div>
+      <div class="price">Iki 1 000 m²<strong>80–120 €</strong></div>
+    </div>
+    <p style="color:#91a397;margin-top:22px">Galutinė kaina priklauso nuo žolės aukščio, ploto, surinkimo ir išvežimo.</p>
+  </div>
+</section>
+
+<section id="kontaktai">
+  <div class="wrap">
+    <h2 class="section-title">Susisiekite <span>su mumis</span></h2>
+    <div class="card hours">
+      <a class="phone" href="tel:+37063079409" onclick="return handleCall(event, '+37063079409')">📞 +370 630 79409</a>
+      <a class="phone" href="tel:+37064607896" onclick="return handleCall(event, '+37064607896')">📞 +370 646 07896</a>
+      <h3>🕐 Darbo laikas</h3>
+      <div class="row"><span>1–5 dienomis</span><strong>15:00–19:00</strong></div>
+      <div class="row"><span>6–7 dienomis</span><strong>12:00–19:00</strong></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="section-title">Reikia sutvarkyti veją?</h2>
+    <p>📞 Paskambinkite ir susitarkime dėl darbo.</p>
+    <a class="btn primary" href="tel:+37063079409" onclick="return handleCall(event, '+37063079409')">SKAMBINTI +370 630 79409</a>
+  </div>
+</section>
+
+<footer>🌿 Žolės pjovimas • Tvarkinga veja – graži aplinka!</footer>
+
+<script>
+function handleCall(event, number) {
+  const now = new Date();
+  const day = now.getDay(); // 0 = Sunday, 1 = Monday ... 6 = Saturday
+  const minutes = now.getHours() * 60 + now.getMinutes();
+
+  // 1–5: 15:00–19:00, 6–7: 12:00–19:00
+  const openStart = (day >= 1 && day <= 5) ? 15 * 60 : (day === 6 || day === 0) ? 12 * 60 : -1;
+  const openEnd = 19 * 60;
+
+  const isOpen = openStart !== -1 && minutes >= openStart && minutes < openEnd;
+
+  if (!isOpen) {
+    event.preventDefault();
+    alert("Atsiprašome, mes nedirbame. 🕐\n\nDarbo laikas:\n1–5: 15:00–19:00\n6–7: 12:00–19:00");
+    return false;
+  }
+
+  return true;
+}
+</script>
+
+</body>
+</html>
